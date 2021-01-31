@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
+const logger = require("./logger");
 
 app.use(express.json());
+
+app.use(logger);
+
 
 const movies = [
     {id : 1 , name : "Action"},
